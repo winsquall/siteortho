@@ -1,0 +1,4 @@
+/* -----------------for pie------------------- */
+.more1, .more2 {
+	behavior: url(js/PIE.htc);
+}

@@ -1,1 +1,536 @@
-<html></html>
+﻿<!DOCTYPE html>
+<html lang="fr">
+<head>
+<title>Chirana France, Orthoservices : importateur fauteuil
+	dentaire Chirana en France, Réunion, Guadeloupe, Martinique, Guyanne</title>
+<meta charset="utf-8">
+<link rel="stylesheet" href="css/reset.css">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/layout.css">
+<link rel="stylesheet" type="text/css" href="css/style_print.css"
+	media="print" />
+
+<link rel="icon" href="images/favicon.ico" type="image/x-icon">
+<link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+
+<script src="js/jquery-1.7.1.js"></script>
+
+<script src="js/jquery.easing.js"></script>
+<script src="js/jquery.animate-colors-min.js"></script>
+<script src="js/forms.js"></script>
+<script src="js/googleMap.js"></script>
+<script src="js/switcher.js"></script>
+<script src="js/sprites.js"></script>
+<script src="js/scripts.js"></script>
+<script src="js/creaPDF.js"></script>
+    <script src="js/configurateur.js"></script>
+
+  
+<!--[if lt IE 9]>
+  	<script src="js/html5.js"></script>
+    <link rel="stylesheet" href="css/ie.css">
+  <![endif]-->
+<!--[if lt IE 8]>
+		<div style=' clear: both; text-align:center; position: relative;'>
+			<a href="http://windows.microsoft.com/en-US/internet-explorer/products/ie/home?ocid=ie6_countdown_bannercode"><img src="http://storage.ie6countdown.com/assets/100/images/banners/warning_bar_0000_us.jpg" border="0" height="42" width="820" alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today." /></a>
+		</div>
+	<![endif]-->
+</head>
+<body>
+    <article>
+        <div id="splash"></div>
+        <ul>
+
+            <li id="configurateurSiege">
+                <div class="contPad">
+                    <!-- 							<div class="grid_13"> -->
+                    <div id="container">
+
+                        <h2>Configurateur Siege Chirana</h2>
+                        <div id="tableauRecap">
+
+                            <h3>Liste des éléments et leur couleur associée</h3>
+                            <p>Note : Couleurs du configurateur non contractuelles</p>
+                            <table>
+                                <tr>
+                                    <td>Element Siege</td>
+                                    <td>Couleur Choisie</td>
+
+                                </tr>
+                                <tr>
+                                    <td>Appui Tete</td>
+                                    <td id="chiranaAppuiTete">CHIRANA : NC</td>
+
+                                </tr>
+                                <tr>
+                                    <td>Dos Appui Tete</td>
+                                    <td id="chiranaDosAppuiTete">CHIRANA : NC</td>
+
+                                </tr>
+                                <tr>
+                                    <td>Dossier</td>
+                                    <td id="chiranaDossier">CHIRANA : NC</td>
+
+                                </tr>
+                                <tr>
+                                    <td>Dos Dossier</td>
+                                    <td id="chiranaDosDossier">CHIRANA : NC</td>
+
+                                </tr>
+                                <tr>
+                                    <td>Siège</td>
+                                    <td id="chiranaSiege">CHIRANA : NC</td>
+
+                                </tr>
+                                <tr>
+                                    <td>Sous siège</td>
+                                    <td id="chiranaSousSiege">CHIRANA : NC</td>
+
+                                </tr>
+                                <tr>
+                                    <td>Pied siège haut</td>
+                                    <td id="chiranaPiedSiegeHaut">CHIRANA : NC</td>
+
+                                </tr>
+                                <tr>
+                                    <td>Pied siège bas</td>
+                                    <td id="chiranaPiedSiegeBas">CHIRANA : NC</td>
+
+                                </tr>
+                                <tr>
+                                    <td>Pied avant</td>
+                                    <td id="chiranaPiedAvant">CHIRANA : NC</td>
+
+                                </tr>
+                                <tr>
+                                    <td>Pied Arriere</td>
+                                    <td id="chiranaPiedArriere">CHIRANA : NC</td>
+
+                                </tr>
+                                <tr>
+                                    <td>Pedale</td>
+                                    <td id="chiranaPedale">CHIRANA : NC</td>
+
+                                </tr>
+                                <tr>
+                                    <td>Bras Siège</td>
+                                    <td id="chiranaBrasSiege">CHIRANA : NC</td>
+
+                                </tr>
+                                <tr>
+                                    <td>Tablette Siège</td>
+                                    <td id="chiranaTabletteSiege">CHIRANA : NC</td>
+
+                                </tr>
+                                <tr>
+                                    <td>Tablette Kart</td>
+                                    <td id="chiranaTabletteKart">CHIRANA : NC</td>
+
+                                </tr>
+                                <tr>
+                                    <td>Pied Kart</td>
+                                    <td id="chiranaPiedKart">CHIRANA : NC</td>
+
+                                </tr>
+                            </table>
+
+
+
+                        </div>
+
+
+                        <div id="tabletteChoixCouleur">
+                            <select id="selectPartie">
+                                <option>Appui Tete</option>
+                                <option>Dos Appui Tete</option>
+                                <option>Dossier</option>
+                                <option>Dos Dossier</option>
+                                <option>Siege</option>
+                                <option>Sous Siege</option>
+                                <option>Pied Siege Haut</option>
+                                <option>Pied Siege Bas</option>
+                                <option>Pied Avant</option>
+                                <option>Pied Arriere</option>
+                                <option>Pedale</option>
+                                <option>Bras Siege</option>
+                                <option>Tablette Siege</option>
+                                <option>Tablette Kart</option>
+                                <option>Pied Kart</option>
+                            </select>
+                            <div class="carreCouleur" id="a252122"
+                                 onclick="couleur('56024')"></div>
+                            <div class="carreCouleur" id="a8b8e97"
+                                 onclick="couleur('56032')"></div>
+                            <div class="carreCouleur" id="aeeeeee"
+                                 onclick="couleur('56029')"></div>
+                            <div class="carreCouleur" id="acdcfc4"
+                                 onclick="couleur('56009')"></div>
+                            <div class="carreCouleur" id="ae89724"
+                                 onclick="couleur('56080')"></div>
+                            <div class="carreCouleur" id="aa70336"
+                                 onclick="couleur('56008')"></div>
+                            <div class="carreCouleur" id="adc364c"
+                                 onclick="couleur('56053')"></div>
+                            <div class="carreCouleur" id="a572b8a"
+                                 onclick="couleur('56056')"></div>
+                            <div class="carreCouleur" id="a0f4492"
+                                 onclick="couleur('56057')"></div>
+                            <div class="carreCouleur" id="a24498d"
+                                 onclick="couleur('56066')"></div>
+                            <div class="carreCouleur" id="a4c79ba"
+                                 onclick="couleur('56037')"></div>
+                            <div class="carreCouleur" id="a0279b1"
+                                 onclick="couleur('56060')"></div>
+                            <div class="carreCouleur" id="a01a88c"
+                                 onclick="couleur('56061')"></div>
+                            <div class="carreCouleur" id="a026666"
+                                 onclick="couleur('56050')"></div>
+                            <div class="carreCouleur" id="a9fc33b"
+                                 onclick="couleur('56048')"></div>
+                            <div class="carreCouleur" id="afed559"
+                                 onclick="couleur('56051')"></div>
+
+
+                        </div>
+
+
+                        <div id="config">
+
+                            <img class="configCouleur"
+                                 src="images/appliconfig/baseNBKart.png" />
+
+                        </div>
+                        <div id="exclu">
+                            <h3>Une exclusivité</h3>
+                            <h3>ORTHOSERVICES</h3>
+                        </div>
+                        <div id="configurateur">
+                            <ul>
+                                <li class="blue" onclick="choixAleatoire()">
+                                    <p>
+                                        <a>Choix Aléatoire</a>
+                                    </p>
+
+                                </li>
+                                <!-- 										<li class="purple"> -->
+                                <!-- 											<p> -->
+                                <!-- 												<a href="#">Pedale</a> -->
+                                <!-- 											</p> -->
+                                <!-- 										</li> -->
+                                <li class="total">
+                                    <p>
+                                        <a href="#">Total Look</a>
+                                    </p>
+
+                                </li>
+                                <li class="yellow">
+                                    <p>
+                                        <a>Envoyer</a>
+                                    </p>
+
+                                </li>
+                                <li class="green" onclick="impression()">
+                                    <p>
+                                        <a>Imprimer</a>
+                                    </p>
+
+
+
+                                </li>
+
+                                <li class="red" onclick="reset()">
+                                    <p>
+                                        <a>Remise à zéro</a>
+                                    </p>
+
+                                </li>
+
+
+                            </ul>
+                            <div id="menuCouleur">
+
+                                <p>
+                                    Envoyer votre sélection à nos services qui vous
+                                    recontacterons dans les plus brelfs délais pour approfondir
+                                    votre demande
+                                </p>
+
+
+                                <form id="formulaireConfigurateur">
+                                    <label for="nom">Nom : </label><input type="text" id="nom"
+                                                                          required /> <label for="prenom">Prénom : </label><input type="text" id="prenom" required /> <label for="email">
+                                        Email
+                                        :
+                                    </label><input type="email" id="email" required /> <label for="telephone">Tel :</label><input type="tel"
+                                                                                                                                  id="telephone"
+                                                                                                                                  pattern="^(?:0|\(?\+33\)?\s?|0033\s?)[1-79](?:[\.\-\s]?\d\d){4}$"
+                                                                                                                                  required /> <input type="button" id="envoyer"
+                                                                                                                                                     value="Envoyer" onclick="envoyerEmail()" />
+                                </form>
+
+                            </div>
+
+
+                        </div>
+
+
+                    </div>
+
+
+
+
+                    <!-- 								</div> -->
+                    <div style="clear: both;"></div>
+                </div>
+
+            </li>
+        </ul>
+
+    </article>
+	<script>
+		
+		
+		// CONFIGURATEUR DE COULEUR DE PIECE
+		
+		function couleur(numeroCouleur) {
+		
+			
+			if ('Dossier' == $('#selectPartie').val()){
+				$("#dossier").remove();							
+					$("#config").append("<img class=\"configCouleur\" id=\"dossier\" src=\"images/appliconfig/dossier"+numeroCouleur+".png\"/>");
+					$("#chiranaDossier").html(numeroCouleur);
+				
+			}
+			else if ('Appui Tete' == $('#selectPartie').val()){
+				$("#AppuiTete").remove();
+				$("#config").append("<img class=\"configCouleur\" id=\"AppuiTete\" src=\"images/appliconfig/AppuiTete"+numeroCouleur+".png\"/>");
+				$("#chiranaAppuiTete").html(numeroCouleur);
+			
+			}
+			else if ('Dos Appui Tete' == $('#selectPartie').val()){
+				$("#dosAppuiTete").remove();
+				$("#config").append("<img class=\"configCouleur\" id=\"dosAppuiTete\" src=\"images/appliconfig/dosAppuiTete"+numeroCouleur+".png\"/>");
+				$("#chiranaDosAppuiTete").html(numeroCouleur);
+			
+			}
+			else if ('Dos Dossier' == $('#selectPartie').val()){
+				$("#dosDossier").remove();
+				$("#config").append("<img class=\"configCouleur\" id=\"dosDossier\" src=\"images/appliconfig/dosDossier"+numeroCouleur+".png\"/>");
+				$("#chiranaDosDossier").html(numeroCouleur);
+			
+			}
+			else if ('Siege' == $('#selectPartie').val()){
+				$("#siege").remove();
+				$("#config").append("<img class=\"configCouleur\" id=\"siege\" src=\"images/appliconfig/siege"+numeroCouleur+".png\"/>");
+				$("#chiranaSiege").html(numeroCouleur);
+			
+			}
+			else if ('Sous Siege' == $('#selectPartie').val()){
+				$("#sousSiege").remove();
+				$("#config").append("<img class=\"configCouleur\" id=\"sousSiege\" src=\"images/appliconfig/sousSiege"+numeroCouleur+".png\"/>");
+				$("#chiranaSousSiege").html(numeroCouleur);
+			
+			}
+			else if ('Pied Siege Haut' == $('#selectPartie').val()){
+				$("#barreHautSiege").remove();
+				$("#config").append("<img class=\"configCouleur\" id=\"barreHautSiege\" src=\"images/appliconfig/barreHautSiege"+numeroCouleur+".png\"/>");
+				$("#chiranaPiedSiegeHaut").html(numeroCouleur);
+			
+			}
+			else if ('Pied Siege Bas' == $('#selectPartie').val()){
+				$("#barreBasSiege").remove();
+				$("#config").append("<img class=\"configCouleur\" id=\"barreBasSiege\" src=\"images/appliconfig/barreBasSiege"+numeroCouleur+".png\"/>");
+				$("#chiranaPiedSiegeBas").html(numeroCouleur);
+			
+			}
+			else if ('Pied Avant' == $('#selectPartie').val()){
+				$("#piedAvant").remove();
+				$("#config").append("<img class=\"configCouleur\" id=\"piedAvant\" src=\"images/appliconfig/piedAvant"+numeroCouleur+".png\"/>");
+				$("#chiranaPiedAvant").html(numeroCouleur);
+			
+			}
+			else if ('Pied Arriere' == $('#selectPartie').val()){
+				$("#piedArriere").remove();
+				$("#config").append("<img class=\"configCouleur\" id=\"piedArriere\" src=\"images/appliconfig/piedArriere"+numeroCouleur+".png\"/>");
+				$("#chiranaPiedArriere").html(numeroCouleur);
+			
+			}
+else if ('Pedale' == $('#selectPartie').val()){
+	$("#pedale").remove();
+				$("#config").append("<img class=\"configCouleur\" id=\"pedale\" src=\"images/appliconfig/pedale"+numeroCouleur+".png\"/>");
+				$("#chiranaPedale").html(numeroCouleur);
+			
+			}
+else if ('Bras Siege' == $('#selectPartie').val()){
+	$("#brasSiege").remove();
+	$("#config").append("<img class=\"configCouleur\" id=\"brasSiege\" src=\"images/appliconfig/brasSiege"+numeroCouleur+".png\"/>");
+	$("#chiranaBrasSiege").html(numeroCouleur);
+
+}
+else if ('Tablette Siege' == $('#selectPartie').val()){
+	$("#tabletteSiege").remove();
+	$("#config").append("<img class=\"configCouleur\"  id=\"tabletteSiege\" src=\"images/appliconfig/tabletteSiege"+numeroCouleur+".png\"/>");
+	$("#chiranaTabletteSiege").html(numeroCouleur);
+
+}
+else if ('Tablette Kart' == $('#selectPartie').val()){
+	$("#tabletteKart").remove();
+	$("#config").append("<img class=\"configCouleur\"  id=\"tabletteKart\" src=\"images/appliconfig/tabletteKart"+numeroCouleur+".png\"/>");
+	$("#chiranaTabletteKart").html(numeroCouleur);
+
+}
+else if ('Pied Kart' == $('#selectPartie').val()){
+	$("#piedKart").remove();
+	$("#config").append("<img class=\"configCouleur\" id=\"piedKart\" src=\"images/appliconfig/piedKart"+numeroCouleur+".png\"/>");
+	$("#chiranaPiedKart").html(numeroCouleur);
+
+}
+
+
+		};	
+		
+		function choixAleatoire(){
+			
+			
+			var tab	= new Array('56024','56032','56029','56009','56080','56053','56008','56056','56057','56066','56037','56060','56061','56050','56048','56051');
+			
+			for (i=0; i<15; i++){
+				
+				// On selectionne une couleur via le random du tableau
+				var alea = Math.floor(Math.random() * tab.length);
+				var numeroCouleur = tab[alea]
+				
+				// On change chacune des parties
+				
+				if ('0' == i){
+					$("#dossier").remove();							
+						$("#config").append("<img class=\"configCouleur\" id=\"dossier\" src=\"images/appliconfig/dossier"+numeroCouleur+".png\"/>");
+						$("#chiranaDossier").html(numeroCouleur);
+						
+						
+					
+				}
+				else if ('1' == i){
+					$("#AppuiTete").remove();
+					$("#config").append("<img class=\"configCouleur\" id=\"AppuiTete\" src=\"images/appliconfig/AppuiTete"+numeroCouleur+".png\"/>");
+					$("#chiranaAppuiTete").html(numeroCouleur);
+				
+				}
+				else if ('2' == i){
+					$("#dosAppuiTete").remove();
+					$("#config").append("<img class=\"configCouleur\" id=\"dosAppuiTete\" src=\"images/appliconfig/dosAppuiTete"+numeroCouleur+".png\"/>");
+					$("#chiranaDosAppuiTete").html(numeroCouleur);
+				
+				}
+				else if ('3' == i){
+					$("#dosDossier").remove();
+					$("#config").append("<img class=\"configCouleur\" id=\"dosDossier\" src=\"images/appliconfig/dosDossier"+numeroCouleur+".png\"/>");
+					$("#chiranaDosDossier").html(numeroCouleur);
+				
+				}
+				else if ('4' == i){
+					$("#siege").remove();
+					$("#config").append("<img class=\"configCouleur\" id=\"siege\" src=\"images/appliconfig/siege"+numeroCouleur+".png\"/>");
+					$("#chiranaSiege").html(numeroCouleur);
+				
+				}
+				else if ('5' == i){
+					$("#sousSiege").remove();
+					$("#config").append("<img class=\"configCouleur\" id=\"sousSiege\" src=\"images/appliconfig/sousSiege"+numeroCouleur+".png\"/>");
+					$("#chiranaSousSiege").html(numeroCouleur);
+				
+				}
+				else if ('6' == i){
+					$("#barreHautSiege").remove();
+					$("#config").append("<img class=\"configCouleur\" id=\"barreHautSiege\" src=\"images/appliconfig/barreHautSiege"+numeroCouleur+".png\"/>");
+					$("#chiranaPiedSiegeHaut").html(numeroCouleur);
+				
+				}
+				else if ('7' == i){
+					$("#barreBasSiege").remove();
+					$("#config").append("<img class=\"configCouleur\" id=\"barreBasSiege\" src=\"images/appliconfig/barreBasSiege"+numeroCouleur+".png\"/>");
+					$("#chiranaPiedSiegeBas").html(numeroCouleur);
+				
+				}
+				else if ('8' == i){
+					$("#piedAvant").remove();
+					$("#config").append("<img class=\"configCouleur\" id=\"piedAvant\" src=\"images/appliconfig/piedAvant"+numeroCouleur+".png\"/>");
+					$("#chiranaPiedAvant").html(numeroCouleur);
+				
+				}
+				else if ('9' == i){
+					$("#piedArriere").remove();
+					$("#config").append("<img class=\"configCouleur\" id=\"piedArriere\" src=\"images/appliconfig/piedArriere"+numeroCouleur+".png\"/>");
+					$("#chiranaPiedArriere").html(numeroCouleur);
+				
+				}
+	else if ('10' == i){
+		$("#pedale").remove();
+					$("#config").append("<img class=\"configCouleur\" id=\"pedale\" src=\"images/appliconfig/pedale"+numeroCouleur+".png\"/>");
+					$("#chiranaPedale").html(numeroCouleur);
+				
+				}
+	else if ('11' == i){
+		$("#brasSiege").remove();
+		$("#config").append("<img class=\"configCouleur\" id=\"brasSiege\" src=\"images/appliconfig/brasSiege"+numeroCouleur+".png\"/>");
+		$("#chiranaBrasSiege").html(numeroCouleur);
+
+	}
+	else if ('12' == i){
+		$("#tabletteSiege").remove();
+		$("#config").append("<img class=\"configCouleur\"  id=\"tabletteSiege\" src=\"images/appliconfig/tabletteSiege"+numeroCouleur+".png\"/>");
+		$("#chiranaTabletteSiege").html(numeroCouleur);
+
+	}
+	else if ('13' == i){
+		$("#tabletteKart").remove();
+		$("#config").append("<img class=\"configCouleur\"  id=\"tabletteKart\" src=\"images/appliconfig/tabletteKart"+numeroCouleur+".png\"/>");
+		$("#chiranaTabletteKart").html(numeroCouleur);
+
+	}
+	else if ('14' == i){
+		$("#piedKart").remove();
+		$("#config").append("<img class=\"configCouleur\" id=\"piedKart\" src=\"images/appliconfig/piedKart"+numeroCouleur+".png\"/>");
+		$("#chiranaPiedKart").html(numeroCouleur);
+
+	}
+				
+
+			}
+ 			
+		}
+		$('#menuCouleur').hide();
+		
+		$('.yellow').hover(function() {
+			
+			$('#menuCouleur').show();
+			$('#menuCouleur').css('background-color','#FBC700');
+		
+		},function(){
+			
+			$('#menuCouleur').hide();
+			
+			
+		})
+		$('#menuCouleur').hover(function() {
+			
+			$('#menuCouleur').show();
+			$('#menuCouleur').css('background-color','#FBC700');
+		
+		},function(){
+			
+			$('#menuCouleur').hide();
+			
+		})
+		function test(){
+			
+		}
+		
+		
+		
+		
+	</script>
+   
+
+</body>
+</html>
